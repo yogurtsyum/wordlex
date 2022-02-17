@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment, useRef } from 'react';
+import { useState, useEffect, Fragment, useRef, MutableRefObject } from 'react';
 import { ArrowRightIcon, CheckIcon, DotsVerticalIcon, LockClosedIcon, LogoutIcon, MoonIcon } from '@heroicons/react/outline';
 import { ClipLoader } from 'react-spinners';
 import axios from 'axios';
@@ -36,12 +36,12 @@ export default function Homepage() {
   const [words, setWords] = useState<any>([]);
   const [feedback, setFeedback] = useState<any>([]);
 
-  const ref1 = useRef();
-  const ref2 = useRef();
-  const ref3 = useRef();
-  const ref4 = useRef();
-  const ref5 = useRef();
-  const ref6 = useRef();
+  const ref1 = useRef() as MutableRefObject<HTMLInputElement>;
+  const ref2 = useRef() as MutableRefObject<HTMLInputElement>;
+  const ref3 = useRef() as MutableRefObject<HTMLInputElement>;
+  const ref4 = useRef() as MutableRefObject<HTMLInputElement>;
+  const ref5 = useRef() as MutableRefObject<HTMLInputElement>;
+  const ref6 = useRef() as MutableRefObject<HTMLInputElement>;
 
   const router = useRouter();
   const toast = useToast();
