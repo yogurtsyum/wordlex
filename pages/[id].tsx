@@ -73,7 +73,7 @@ export default function Homepage() {
       setCurrentGuess(window.localStorage.getItem(`${game.id}.currentGuess`));
       setStep(Number(window.localStorage.getItem(`${game.id}.step`)));
       setGuesses(window.localStorage.getItem(`${game.id}.guesses`)?.split(','));
-      setFeedback(window.localStorage.getItem(`${game.id}.feedback`)?.split(','));
+      setFeedback(window.localStorage.getItem(`${game.id}.feedback`) ? window.localStorage.getItem(`${game.id}.feedback`).split(',') : []);
     }
   }, [game]);
 
