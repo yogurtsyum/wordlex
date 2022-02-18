@@ -11,12 +11,12 @@ const games = {
   lotf: {
     id: 'lotf',
     name: 'Lordle',
-    words: ['beast'],
+    words: ['beast', 'spear'],
   },
   lotf2: {
     id: 'lotf2',
-    name: 'Lordle (but less easy)',
-    words: ['simon'],
+    name: 'Lordle (v2)',
+    words: ['beach'],
   }
 }
 
