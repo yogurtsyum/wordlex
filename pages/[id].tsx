@@ -205,7 +205,7 @@ export default function Homepage() {
             <div className="absolute top-1/2 left-1/2 text-center -translate-x-1/2 -translate-y-1/2">
               <Heading textAlign="center" mb={2}>{game.name}</Heading>
               <div>
-                <div>
+                <div className="text-center content-center">
                   <Stack>
                     <HStack>
                       <PinInput defaultValue={guesses[0]} isDisabled={step !== 1} onChange={onGuessChange} focusBorderColor="yellow.500" autoFocus placeholder="" size="lg" colorScheme="gray" type="alphanumeric">
