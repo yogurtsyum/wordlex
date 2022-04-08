@@ -11,7 +11,7 @@ const games = {
   lotf: {
     id: 'lotf',
     name: 'Lordle',
-    words: ['conch'],
+    words: ['shore'],
   },
   lotf2: {
     id: 'lotf2',
