@@ -11,7 +11,7 @@ const games = {
   lotf: {
     id: 'lotf',
     name: 'Lordle',
-    words: ['shore'],
+    words: ['shore', 'conch', 'beast', 'beach'],
   },
   lotf2: {
     id: 'lotf2',
@@ -57,7 +57,7 @@ export default function Homepage() {
         alert('Sorry, this game link is invalid.');
         router.push('/');
       } else {
-        const daysSinceEpoch = Math.floor((new Date() as any) / 8.64e7);
+        const daysSinceEpoch = Math.floor((new Date().getTime()) / 8.64e7); // @ts-ignore
         setWord(game.words[daysSinceEpoch % game.words.length]);
         setGame(game);
       }
@@ -66,7 +66,7 @@ export default function Homepage() {
 
   useEffect(() => {
     if(!game) return;
-    const daysSinceEpoch = Math.floor((new Date() as any) / 8.64e7);
+    const daysSinceEpoch = Math.floor((new Date().getTime()) / 8.64e7); // @ts-ignore
     if(window.localStorage.getItem(`${game.id}.lastPlayed`) !== daysSinceEpoch.toString()) {
       window.localStorage.clear();
     } else {
