@@ -17,6 +17,11 @@ const games = {
     id: 'lotf2',
     name: 'Lordle (v2)',
     words: ['beach'],
+  },
+  latin: {
+    id: 'latin',
+    name: 'Latin Wordle',
+    words: ['canis', 'cibus', 'filia'],
   }
 }
 
